@@ -112,7 +112,7 @@ apiRunnerAsync(`onClientEntry`).then(() => {
     const preferDefault = m => (m && m.default) || m
     let Root = preferDefault(require(`./root`))
     domReady(() => {
-      renderer(<Root />, rootElement, () => {
+      (<Root />, rootElement, () => {
         apiRunner(`onInitialClientRender`)
       })
     })
